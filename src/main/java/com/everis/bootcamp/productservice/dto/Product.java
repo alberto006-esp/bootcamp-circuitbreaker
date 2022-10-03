@@ -1,8 +1,11 @@
 package com.everis.bootcamp.productservice.dto;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Product {
 	private Integer productId;
 	private String channel;
+	@Value("${local.server.port}")
 	private String port;
 
 	public Integer getProductId() {
