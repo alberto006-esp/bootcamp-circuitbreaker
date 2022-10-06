@@ -1,12 +1,14 @@
 package com.everis.bootcamp.productservice.dto;
 
-import org.springframework.beans.factory.annotation.Value;
+
+import java.math.BigDecimal;
 
 public class Product {
 	private Integer productId;
 	private String channel;
-	@Value("${local.server.port}")
 	private String port;
+	
+	private BigDecimal price;
 
 	public Integer getProductId() {
 		return productId;
@@ -31,5 +33,12 @@ public class Product {
 	public void setPort(String port) {
 		this.port = port;
 	}
-	
+
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
 }
